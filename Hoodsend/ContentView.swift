@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+extension UIScreen{
+   static let screenWidth = UIScreen.main.bounds.size.width
+   static let screenHeight = UIScreen.main.bounds.size.height
+   static let screenSize = UIScreen.main.bounds.size
+}
+
+var tapPurple: Color = Color(red:0.6, green: 0, blue: 1)
+
 struct ContentView: View {
     @State var customer: Bool = false
     @State var merchant: Bool = false
@@ -25,14 +33,16 @@ struct ContentView: View {
                     Button() { customer = true } label: {
                         Text("Customer")
                             .font(.system(size: 25))
+                            .fontWeight(.bold)
                             .foregroundColor(Color(red: 1, green: 1, blue: 1))
                     }
                     .padding()
-                    .background(.green)
+                    .background(tapPurple)
                     .clipShape(Capsule())
                     Button() { merchant = true } label: {
                         Text("Merchant")
                             .font(.system(size: 25))
+                            .fontWeight(.bold)
                             .foregroundColor(Color(red: 1, green: 1, blue: 1))
                     }
                     .padding()

@@ -1,6 +1,6 @@
 //
 //  MerchantHome.swift
-//  Hoodsend
+//  Tap
 //
 //  Created by Michael Chen on 4/12/23.
 //
@@ -33,6 +33,8 @@ struct MerchantHome: View {
                 .fontWeight(.bold)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 16)
+            
+            Spacer()
         }
     }
 }

@@ -14,9 +14,9 @@
 		B472F86829E6598C00179543 /* HoodsendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B472F86729E6598C00179543 /* HoodsendTests.swift */; };
 		B472F87229E6598C00179543 /* HoodsendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B472F87129E6598C00179543 /* HoodsendUITests.swift */; };
 		B472F87429E6598C00179543 /* HoodsendUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B472F87329E6598C00179543 /* HoodsendUITestsLaunchTests.swift */; };
-		B4799B9E29E6E9E100FA917A /* CustomerScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4799B9D29E6E9E100FA917A /* CustomerScan.swift */; };
 		B4799BA029E7B14300FA917A /* CustomerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4799B9F29E7B14300FA917A /* CustomerHome.swift */; };
 		B4799BA229E7B19E00FA917A /* MerchantHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4799BA129E7B19E00FA917A /* MerchantHome.swift */; };
+		B4799BA429E8DC9300FA917A /* PlaceOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4799BA329E8DC9300FA917A /* PlaceOrder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,19 +37,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B472F85329E6598B00179543 /* Hoodsend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoodsend.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B472F85329E6598B00179543 /* Tap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B472F85629E6598B00179543 /* HoodsendApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoodsendApp.swift; sourceTree = "<group>"; };
 		B472F85829E6598B00179543 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B472F85A29E6598C00179543 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B472F85D29E6598C00179543 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B472F86329E6598C00179543 /* HoodsendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoodsendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B472F86329E6598C00179543 /* TapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B472F86729E6598C00179543 /* HoodsendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoodsendTests.swift; sourceTree = "<group>"; };
-		B472F86D29E6598C00179543 /* HoodsendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoodsendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B472F86D29E6598C00179543 /* TapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B472F87129E6598C00179543 /* HoodsendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoodsendUITests.swift; sourceTree = "<group>"; };
 		B472F87329E6598C00179543 /* HoodsendUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoodsendUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B4799B9D29E6E9E100FA917A /* CustomerScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerScan.swift; sourceTree = "<group>"; };
 		B4799B9F29E7B14300FA917A /* CustomerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerHome.swift; sourceTree = "<group>"; };
 		B4799BA129E7B19E00FA917A /* MerchantHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantHome.swift; sourceTree = "<group>"; };
+		B4799BA329E8DC9300FA917A /* PlaceOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +90,9 @@
 		B472F85429E6598B00179543 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B472F85329E6598B00179543 /* Hoodsend.app */,
-				B472F86329E6598C00179543 /* HoodsendTests.xctest */,
-				B472F86D29E6598C00179543 /* HoodsendUITests.xctest */,
+				B472F85329E6598B00179543 /* Tap.app */,
+				B472F86329E6598C00179543 /* TapTests.xctest */,
+				B472F86D29E6598C00179543 /* TapUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,9 +104,9 @@
 				B472F85829E6598B00179543 /* ContentView.swift */,
 				B472F85A29E6598C00179543 /* Assets.xcassets */,
 				B472F85C29E6598C00179543 /* Preview Content */,
-				B4799B9D29E6E9E100FA917A /* CustomerScan.swift */,
 				B4799B9F29E7B14300FA917A /* CustomerHome.swift */,
 				B4799BA129E7B19E00FA917A /* MerchantHome.swift */,
+				B4799BA329E8DC9300FA917A /* PlaceOrder.swift */,
 			);
 			path = Hoodsend;
 			sourceTree = "<group>";
@@ -139,9 +139,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B472F85229E6598B00179543 /* Hoodsend */ = {
+		B472F85229E6598B00179543 /* Tap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B472F87729E6598C00179543 /* Build configuration list for PBXNativeTarget "Hoodsend" */;
+			buildConfigurationList = B472F87729E6598C00179543 /* Build configuration list for PBXNativeTarget "Tap" */;
 			buildPhases = (
 				B472F84F29E6598B00179543 /* Sources */,
 				B472F85029E6598B00179543 /* Frameworks */,
@@ -151,14 +151,14 @@
 			);
 			dependencies = (
 			);
-			name = Hoodsend;
+			name = Tap;
 			productName = Hoodsend;
-			productReference = B472F85329E6598B00179543 /* Hoodsend.app */;
+			productReference = B472F85329E6598B00179543 /* Tap.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B472F86229E6598C00179543 /* HoodsendTests */ = {
+		B472F86229E6598C00179543 /* TapTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B472F87A29E6598C00179543 /* Build configuration list for PBXNativeTarget "HoodsendTests" */;
+			buildConfigurationList = B472F87A29E6598C00179543 /* Build configuration list for PBXNativeTarget "TapTests" */;
 			buildPhases = (
 				B472F85F29E6598C00179543 /* Sources */,
 				B472F86029E6598C00179543 /* Frameworks */,
@@ -169,14 +169,14 @@
 			dependencies = (
 				B472F86529E6598C00179543 /* PBXTargetDependency */,
 			);
-			name = HoodsendTests;
+			name = TapTests;
 			productName = HoodsendTests;
-			productReference = B472F86329E6598C00179543 /* HoodsendTests.xctest */;
+			productReference = B472F86329E6598C00179543 /* TapTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B472F86C29E6598C00179543 /* HoodsendUITests */ = {
+		B472F86C29E6598C00179543 /* TapUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B472F87D29E6598C00179543 /* Build configuration list for PBXNativeTarget "HoodsendUITests" */;
+			buildConfigurationList = B472F87D29E6598C00179543 /* Build configuration list for PBXNativeTarget "TapUITests" */;
 			buildPhases = (
 				B472F86929E6598C00179543 /* Sources */,
 				B472F86A29E6598C00179543 /* Frameworks */,
@@ -187,9 +187,9 @@
 			dependencies = (
 				B472F86F29E6598C00179543 /* PBXTargetDependency */,
 			);
-			name = HoodsendUITests;
+			name = TapUITests;
 			productName = HoodsendUITests;
-			productReference = B472F86D29E6598C00179543 /* HoodsendUITests.xctest */;
+			productReference = B472F86D29E6598C00179543 /* TapUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -215,7 +215,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B472F84E29E6598B00179543 /* Build configuration list for PBXProject "Hoodsend" */;
+			buildConfigurationList = B472F84E29E6598B00179543 /* Build configuration list for PBXProject "Tap" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -228,9 +228,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B472F85229E6598B00179543 /* Hoodsend */,
-				B472F86229E6598C00179543 /* HoodsendTests */,
-				B472F86C29E6598C00179543 /* HoodsendUITests */,
+				B472F85229E6598B00179543 /* Tap */,
+				B472F86229E6598C00179543 /* TapTests */,
+				B472F86C29E6598C00179543 /* TapUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,9 +268,9 @@
 			files = (
 				B4799BA029E7B14300FA917A /* CustomerHome.swift in Sources */,
 				B472F85929E6598B00179543 /* ContentView.swift in Sources */,
-				B4799B9E29E6E9E100FA917A /* CustomerScan.swift in Sources */,
 				B472F85729E6598B00179543 /* HoodsendApp.swift in Sources */,
 				B4799BA229E7B19E00FA917A /* MerchantHome.swift in Sources */,
+				B4799BA429E8DC9300FA917A /* PlaceOrder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,12 +296,12 @@
 /* Begin PBXTargetDependency section */
 		B472F86529E6598C00179543 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B472F85229E6598B00179543 /* Hoodsend */;
+			target = B472F85229E6598B00179543 /* Tap */;
 			targetProxy = B472F86429E6598C00179543 /* PBXContainerItemProxy */;
 		};
 		B472F86F29E6598C00179543 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B472F85229E6598B00179543 /* Hoodsend */;
+			target = B472F85229E6598B00179543 /* Tap */;
 			targetProxy = B472F86E29E6598C00179543 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -495,7 +495,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hoodsend.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hoodsend";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tap.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tap";
 			};
 			name = Debug;
 		};
@@ -515,7 +515,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hoodsend.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hoodsend";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tap.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tap";
 			};
 			name = Release;
 		};
@@ -558,7 +558,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B472F84E29E6598B00179543 /* Build configuration list for PBXProject "Hoodsend" */ = {
+		B472F84E29E6598B00179543 /* Build configuration list for PBXProject "Tap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B472F87529E6598C00179543 /* Debug */,
@@ -567,7 +567,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B472F87729E6598C00179543 /* Build configuration list for PBXNativeTarget "Hoodsend" */ = {
+		B472F87729E6598C00179543 /* Build configuration list for PBXNativeTarget "Tap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B472F87829E6598C00179543 /* Debug */,
@@ -576,7 +576,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B472F87A29E6598C00179543 /* Build configuration list for PBXNativeTarget "HoodsendTests" */ = {
+		B472F87A29E6598C00179543 /* Build configuration list for PBXNativeTarget "TapTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B472F87B29E6598C00179543 /* Debug */,
@@ -585,7 +585,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B472F87D29E6598C00179543 /* Build configuration list for PBXNativeTarget "HoodsendUITests" */ = {
+		B472F87D29E6598C00179543 /* Build configuration list for PBXNativeTarget "TapUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B472F87E29E6598C00179543 /* Debug */,
