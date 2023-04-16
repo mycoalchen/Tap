@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		B4799BA029E7B14300FA917A /* CustomerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4799B9F29E7B14300FA917A /* CustomerHome.swift */; };
 		B4799BA229E7B19E00FA917A /* MerchantHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4799BA129E7B19E00FA917A /* MerchantHome.swift */; };
 		B4799BA429E8DC9300FA917A /* PlaceOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4799BA329E8DC9300FA917A /* PlaceOrder.swift */; };
+		B4799BA629EB92E000FA917A /* Lexend-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4799BA529EB92E000FA917A /* Lexend-VariableFont_wght.ttf */; };
+		B4799BA929EBB46000FA917A /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4799BA829EBB46000FA917A /* Cart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26F38FF18B9D2FB217D433C0 /* Pods-Tap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tap.release.xcconfig"; path = "Target Support Files/Pods-Tap/Pods-Tap.release.xcconfig"; sourceTree = "<group>"; };
+		272138B1B38DCF6308CEBDD7 /* Pods-Tap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tap.debug.xcconfig"; path = "Target Support Files/Pods-Tap/Pods-Tap.debug.xcconfig"; sourceTree = "<group>"; };
+		4C5A5E11FABB31CBB4E0C02D /* Pods-TapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapTests.release.xcconfig"; path = "Target Support Files/Pods-TapTests/Pods-TapTests.release.xcconfig"; sourceTree = "<group>"; };
+		7DD419AED542B616EA2F9E1D /* Pods-TapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapTests.debug.xcconfig"; path = "Target Support Files/Pods-TapTests/Pods-TapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B472F85329E6598B00179543 /* Tap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B472F85629E6598B00179543 /* HoodsendApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoodsendApp.swift; sourceTree = "<group>"; };
 		B472F85829E6598B00179543 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +56,11 @@
 		B4799B9F29E7B14300FA917A /* CustomerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerHome.swift; sourceTree = "<group>"; };
 		B4799BA129E7B19E00FA917A /* MerchantHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantHome.swift; sourceTree = "<group>"; };
 		B4799BA329E8DC9300FA917A /* PlaceOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrder.swift; sourceTree = "<group>"; };
+		B4799BA529EB92E000FA917A /* Lexend-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lexend-VariableFont_wght.ttf"; path = "../../../../Desktop/Lexend/Lexend-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		B4799BA729EB93D400FA917A /* Tap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Tap-Info.plist"; sourceTree = "<group>"; };
+		B4799BA829EBB46000FA917A /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		E62CE27BB533CD9EC73E0257 /* Pods-Tap-TapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tap-TapUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tap-TapUITests/Pods-Tap-TapUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E89221601E36AE408C7F9565 /* Pods-Tap-TapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tap-TapUITests.release.xcconfig"; path = "Target Support Files/Pods-Tap-TapUITests/Pods-Tap-TapUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,13 +88,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2432A84A8D2218AEDDCA018A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B472F84A29E6598B00179543 = {
 			isa = PBXGroup;
 			children = (
+				B4799BA729EB93D400FA917A /* Tap-Info.plist */,
 				B472F85529E6598B00179543 /* Hoodsend */,
 				B472F86629E6598C00179543 /* HoodsendTests */,
 				B472F87029E6598C00179543 /* HoodsendUITests */,
 				B472F85429E6598B00179543 /* Products */,
+				E6C5E2DFABE8F3D425A259E1 /* Pods */,
+				2432A84A8D2218AEDDCA018A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,11 +123,13 @@
 			children = (
 				B472F85629E6598B00179543 /* HoodsendApp.swift */,
 				B472F85829E6598B00179543 /* ContentView.swift */,
+				B4799BA529EB92E000FA917A /* Lexend-VariableFont_wght.ttf */,
 				B472F85A29E6598C00179543 /* Assets.xcassets */,
 				B472F85C29E6598C00179543 /* Preview Content */,
 				B4799B9F29E7B14300FA917A /* CustomerHome.swift */,
 				B4799BA129E7B19E00FA917A /* MerchantHome.swift */,
 				B4799BA329E8DC9300FA917A /* PlaceOrder.swift */,
+				B4799BA829EBB46000FA917A /* Cart.swift */,
 			);
 			path = Hoodsend;
 			sourceTree = "<group>";
@@ -136,6 +159,19 @@
 			path = HoodsendUITests;
 			sourceTree = "<group>";
 		};
+		E6C5E2DFABE8F3D425A259E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				272138B1B38DCF6308CEBDD7 /* Pods-Tap.debug.xcconfig */,
+				26F38FF18B9D2FB217D433C0 /* Pods-Tap.release.xcconfig */,
+				E62CE27BB533CD9EC73E0257 /* Pods-Tap-TapUITests.debug.xcconfig */,
+				E89221601E36AE408C7F9565 /* Pods-Tap-TapUITests.release.xcconfig */,
+				7DD419AED542B616EA2F9E1D /* Pods-TapTests.debug.xcconfig */,
+				4C5A5E11FABB31CBB4E0C02D /* Pods-TapTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +179,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B472F87729E6598C00179543 /* Build configuration list for PBXNativeTarget "Tap" */;
 			buildPhases = (
+				540783913F9DEE13D4BEEC78 /* [CP] Check Pods Manifest.lock */,
 				B472F84F29E6598B00179543 /* Sources */,
 				B472F85029E6598B00179543 /* Frameworks */,
 				B472F85129E6598B00179543 /* Resources */,
@@ -160,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B472F87A29E6598C00179543 /* Build configuration list for PBXNativeTarget "TapTests" */;
 			buildPhases = (
+				6F0A0C07F7E73750781CB632 /* [CP] Check Pods Manifest.lock */,
 				B472F85F29E6598C00179543 /* Sources */,
 				B472F86029E6598C00179543 /* Frameworks */,
 				B472F86129E6598C00179543 /* Resources */,
@@ -178,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B472F87D29E6598C00179543 /* Build configuration list for PBXNativeTarget "TapUITests" */;
 			buildPhases = (
+				D58E2BA21446D6A39F680FB5 /* [CP] Check Pods Manifest.lock */,
 				B472F86929E6598C00179543 /* Sources */,
 				B472F86A29E6598C00179543 /* Frameworks */,
 				B472F86B29E6598C00179543 /* Resources */,
@@ -216,7 +255,7 @@
 				};
 			};
 			buildConfigurationList = B472F84E29E6598B00179543 /* Build configuration list for PBXProject "Tap" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -242,6 +281,7 @@
 			files = (
 				B472F85E29E6598C00179543 /* Preview Assets.xcassets in Resources */,
 				B472F85B29E6598C00179543 /* Assets.xcassets in Resources */,
+				B4799BA629EB92E000FA917A /* Lexend-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,12 +301,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		540783913F9DEE13D4BEEC78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F0A0C07F7E73750781CB632 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TapTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D58E2BA21446D6A39F680FB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tap-TapUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B472F84F29E6598B00179543 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B4799BA029E7B14300FA917A /* CustomerHome.swift in Sources */,
+				B4799BA929EBB46000FA917A /* Cart.swift in Sources */,
 				B472F85929E6598B00179543 /* ContentView.swift in Sources */,
 				B472F85729E6598B00179543 /* HoodsendApp.swift in Sources */,
 				B4799BA229E7B19E00FA917A /* MerchantHome.swift in Sources */,
@@ -423,6 +533,7 @@
 		};
 		B472F87829E6598C00179543 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 272138B1B38DCF6308CEBDD7 /* Pods-Tap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -432,6 +543,7 @@
 				DEVELOPMENT_TEAM = RK8JWZ43AP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Tap-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -452,6 +564,7 @@
 		};
 		B472F87929E6598C00179543 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26F38FF18B9D2FB217D433C0 /* Pods-Tap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -461,6 +574,7 @@
 				DEVELOPMENT_TEAM = RK8JWZ43AP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Tap-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -481,6 +595,7 @@
 		};
 		B472F87B29E6598C00179543 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DD419AED542B616EA2F9E1D /* Pods-TapTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,6 +616,7 @@
 		};
 		B472F87C29E6598C00179543 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C5A5E11FABB31CBB4E0C02D /* Pods-TapTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -521,6 +637,7 @@
 		};
 		B472F87E29E6598C00179543 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E62CE27BB533CD9EC73E0257 /* Pods-Tap-TapUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +656,7 @@
 		};
 		B472F87F29E6598C00179543 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E89221601E36AE408C7F9565 /* Pods-Tap-TapUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

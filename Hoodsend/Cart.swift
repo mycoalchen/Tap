@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PlaceOrder: View {
+struct Cart: View {
     var shopName: String
     var balance: Float
     
@@ -28,7 +28,7 @@ struct PlaceOrder: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
-                Text(shopName)
+                Text("Cart")
                     .font(Font.custom("Lexend-Bold", size: 24))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 36)
@@ -87,20 +87,12 @@ struct PlaceOrder: View {
                     .frame(height: UIScreen.screenHeight / 5)
                     .padding(.all, 0)
                 VStack {
-                    Text("Balance: $50.00")
+                    Text("Total: $10.00")
                         .font(Font.custom("Lexend-Bold", size: 24))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 36)
                         .padding(.bottom, 12)
-                    Button() {} label: {
-                        Text("Checkout")
-                            .font(Font.custom("Lexend-Bold", size: 18))
-                            .foregroundColor(.white)
-                    }
-                    .frame(width: 240)
-                    .padding()
-                    .background(tapPurple)
-                    .clipShape(Capsule())
+                    
                 }
             }
         }
@@ -109,8 +101,8 @@ struct PlaceOrder: View {
     
 }
 
-struct PlaceOrder_Previews: PreviewProvider {
+struct Cart_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceOrder(shopName: "Chipotle", balance: 66)
+        Cart(shopName: "Chipotle", balance: 66)
     }
 }

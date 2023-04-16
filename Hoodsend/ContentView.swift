@@ -23,16 +23,16 @@ struct ContentView: View {
         NavigationStack {
             VStack(spacing: 10) {
                 Text("Welcome to Tap!")
-                    .font(.system(size: 40))
+                    .font(Font.custom("Lexend-Bold", size: 36))
                     .multilineTextAlignment(.center)
-                    .padding([.bottom], 40)
+                    .padding([.bottom], 18)
                 Text("I'm a...")
-                    .font(.system(size: 30))
-                    .padding([.bottom], 20)
+                    .font(Font.custom("Lexend", size: 30))
+                    .padding([.bottom], 18)
                 VStack {
                     Button() { customer = true } label: {
                         Text("Customer")
-                            .font(.system(size: 25))
+                            .font(Font.custom("Lexend-Medium", size: 25))
                             .fontWeight(.bold)
                             .foregroundColor(Color(red: 1, green: 1, blue: 1))
                     }
@@ -41,7 +41,7 @@ struct ContentView: View {
                     .clipShape(Capsule())
                     Button() { merchant = true } label: {
                         Text("Merchant")
-                            .font(.system(size: 25))
+                            .font(Font.custom("Lexend-Medium", size: 25))
                             .fontWeight(.bold)
                             .foregroundColor(Color(red: 1, green: 1, blue: 1))
                     }

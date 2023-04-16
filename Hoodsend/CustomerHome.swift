@@ -11,26 +11,24 @@ struct CustomerHome: View {
     struct Merchant: Identifiable {
         let name: String
         let location: String
-        let balance: Float
+        let discountPercent: Float
         var id: String { name + " - " + location }
     }
     
     private let merchants: [Merchant] = [
-        Merchant(name: "Lexie's", location: "Exeter", balance: 60.50),
-        Merchant(name: "Szechuan Taste", location: "Exeter", balance: 40.32),
-        Merchant(name: "Romero's Pizza", location: "Exeter", balance: 50.00),
+        Merchant(name: "Peet's Coffee", location: "Exeter, NH", discountPercent: 5),
+        Merchant(name: "McDonald's", location: "Exeter, NH", discountPercent: 5),
+        Merchant(name: "Bread Bank", location: "Exeter, NH", discountPercent: 6),
     ]
     
-    @State var selectedMerchant: Merchant = Merchant(name: "", location: "", balance: 0);
+    @State var selectedMerchant: Merchant = Merchant(name: "", location: "", discountPercent: 0);
     @State var isMerchantSelected: Bool = false;
-    
     
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
                 Text("Shops")
-                    .font(.system(size: 24))
-                    .fontWeight(.bold)
+                    .font(Font.custom("Lexend-Bold", size: 24))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 36)
                     .padding(.top, 12)
@@ -61,12 +59,12 @@ struct CustomerHome: View {
                     } label: {
                         HStack() {
                             VStack(alignment: .leading, spacing: 0) {
-                                Text(merchant.name).foregroundColor(.black).fontWeight(.bold)
-                                Text(merchant.location).foregroundColor(.black)
+                                Text(merchant.name).foregroundColor(.black).font(Font.custom("Lexend", size: 16))
+                                Text(merchant.location).foregroundColor(.black).font(Font.custom("Lexend", size: 16))
                             }
                             Spacer()
-                            Text("$\(merchant.balance, specifier: "%.2f")")
-                                .foregroundColor(.black)
+                            Text("\(merchant.discountPercent, specifier: "%.2f")% off")
+                                .foregroundColor(Color(red: 0.8, green: 0, blue: 0)).font(Font.custom("Lexend-Bold", size: 16))
                         }
                         .padding(.horizontal, 16)
                     }
@@ -83,20 +81,44 @@ struct CustomerHome: View {
             .frame(maxWidth: .infinity)
             .padding(.horizontal, 16)
             Spacer(minLength: 24)
-            Button() {} label: {
-                Text("Add Merchant")
-                    .font(.system(size: 25))
-                    .fontWeight(.bold)
-                    .foregroundColor(Color(red: 1, green: 1, blue: 1))
+            ZStack {
+                Rectangle()
+                    .fill(Color(red: 0.933, green: 0.933, blue: 0.933))
+                    .frame(height: UIScreen.screenHeight / 5)
+                    .padding(.all, 0)
+                VStack {
+                    Text("Balance: $50.00")
+                        .font(Font.custom("Lexend-Bold", size: 24))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 36)
+                        .padding(.bottom, 12)
+                    HStack(spacing: 18) {
+                        Button() {} label: {
+                            Text("Deposit")
+                                .font(Font.custom("Lexend-Bold", size: 18))
+                                .foregroundColor(.white)
+                        }
+                        .frame(width: 120)
+                        .padding()
+                        .background(tapPurple)
+                        .clipShape(Capsule())
+                        Button() {} label: {
+                            Text("Transfer")
+                                .font(Font.custom("Lexend-Bold", size: 18))
+                                .foregroundColor(.black)
+                        }
+                        .frame(width: 120)
+                        .padding()
+                        .background(.white)
+                        .clipShape(Capsule())
+                    }
+                }
             }
-            .padding()
-            .background(tapPurple)
-            .clipShape(Capsule())
-            Spacer()
         }
         .navigationDestination(isPresented: $isMerchantSelected) {
-            PlaceOrder(shopName: selectedMerchant.name, balance: selectedMerchant.balance)
-        }   
+            PlaceOrder(shopName: selectedMerchant.name, balance: selectedMerchant.discountPercent)
+        }
+        .ignoresSafeArea(edges: [.bottom])
     }
 }
 
