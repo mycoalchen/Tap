@@ -7,29 +7,22 @@
 
 import SwiftUI
 
+public struct MenuItem: Identifiable, Hashable {
+    let name: String
+    let originalPrice: Float
+    public var id: String { name }
+}
+
 struct PlaceOrder: View {
     var shopName: String
     var discountPercent: Float
-    
-    struct MenuItem: Identifiable {
-        let name: String
-        let originalPrice: Float
-        var amount: Int
-        var id: String { name }
-        
-        mutating func increment() {
-            amount += 1
-        }
-        mutating func decrement() {
-            if (amount > 0) { amount -= 1 }
-        }
-    }
+    @ObservedObject var order: Order
     
     @State private var menuItems: [MenuItem] = [
-        MenuItem(name: "Gluten-Free White Bread", originalPrice: 3.00, amount: 0),
-        MenuItem(name: "Potato Bread", originalPrice: 2.50, amount: 0),
-        MenuItem(name: "Tortilla", originalPrice: 1.50, amount: 0),
-        MenuItem(name: "Crackers", originalPrice: 0.99, amount: 0),
+        MenuItem(name: "Gluten-Free White Bread", originalPrice: 3.00),
+        MenuItem(name: "Potato Bread", originalPrice: 2.50),
+        MenuItem(name: "Tortilla", originalPrice: 1.50),
+        MenuItem(name: "Crackers", originalPrice: 0.99),
     ]
     
     var body: some View {
@@ -67,20 +60,28 @@ struct PlaceOrder: View {
                         HStack() {
                             VStack(alignment: .leading, spacing: 0) {
                                 Text(menuItems[index].name).foregroundColor(.black).font(Font.custom("Lexend", size: 16))
-                                Text(String(format: "%.2f", menuItems[index].originalPrice)).foregroundColor(.black).font(Font.custom("Lexend", size: 16)).strikethrough(true) + Text(String(format: " %.2f", menuItems[index].originalPrice * (1 - discountPercent / 100))).font(Font.custom("Lexend", size: 16)).foregroundColor(Color(red: 0.8, green: 0, blue: 0))
+                                Text(String(format: "$%.2f", menuItems[index].originalPrice)).foregroundColor(.black).font(Font.custom("Lexend", size: 16)).strikethrough(true) + Text(String(format: " $%.2f", menuItems[index].originalPrice * (1 - discountPercent / 100))).font(Font.custom("Lexend", size: 16)).foregroundColor(Color(red: 0.8, green: 0, blue: 0))
                             }
                             Spacer()
                             HStack() {
                                 Button() {
-                                    menuItems[index].decrement()
+                                    if let num = order.items[menuItems[index]] {
+                                        if (num > 0) {
+                                            order.items.updateValue(num-1, forKey: menuItems[index])
+                                        }
+                                    }
                                 } label: {
                                     Text("-")
                                         .font(Font.custom("Lexend", size: 16)).foregroundColor(.black)
                                 }
-                                Text(String(menuItems[index].amount))
+                                Text(String(order.items[menuItems[index]] ?? 0))
                                     .font(Font.custom("Lexend", size: 14)).foregroundColor(.black)
                                 Button() {
-                                    menuItems[index].increment()
+                                    if let num = order.items[menuItems[index]] {
+                                        order.items.updateValue(num+1, forKey: menuItems[index])
+                                    } else {
+                                        order.items.updateValue(1, forKey: menuItems[index])
+                                    }
                                 } label: {
                                     Text("+")
                                         .font(Font.custom("Lexend", size: 16)).foregroundColor(.black)
@@ -134,11 +135,10 @@ struct PlaceOrder: View {
         }
         .ignoresSafeArea(edges: [.bottom])
     }
-    
 }
 
 struct PlaceOrder_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceOrder(shopName: "Bread Bank", discountPercent: 6)
+        PlaceOrder(shopName: "Bread Bank", discountPercent: 6, order: Order())
     }
 }

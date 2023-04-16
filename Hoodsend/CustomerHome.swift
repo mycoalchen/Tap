@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+// Stores a map representing the user's current order
+class Order: ObservableObject {
+    @Published var items = [MenuItem: Int]()
+}
+
 struct CustomerHome: View {
     struct Merchant: Identifiable {
         let name: String
@@ -15,16 +20,19 @@ struct CustomerHome: View {
         var id: String { name + " - " + location }
     }
     
+    @ObservedObject var order = Order()
+    
     private let merchants: [Merchant] = [
         Merchant(name: "Peet's Coffee", location: "Exeter, NH", discountPercent: 5),
         Merchant(name: "McDonald's", location: "Exeter, NH", discountPercent: 5),
         Merchant(name: "Bread Bank", location: "Exeter, NH", discountPercent: 6),
     ]
-    
+        
     @State var selectedMerchant: Merchant = Merchant(name: "", location: "", discountPercent: 0);
     @State var isMerchantSelected: Bool = false;
     
     var body: some View {
+        
         VStack(spacing: 0) {
             HStack(spacing: 0) {
                 Text("Shops")
@@ -102,7 +110,9 @@ struct CustomerHome: View {
                         .padding()
                         .background(tapPurple)
                         .clipShape(Capsule())
-                        Button() {} label: {
+                        Button() {
+                            print(order.items)
+                        } label: {
                             Text("Transfer")
                                 .font(Font.custom("Lexend-Bold", size: 18))
                                 .foregroundColor(.black)
@@ -116,7 +126,7 @@ struct CustomerHome: View {
             }
         }
         .navigationDestination(isPresented: $isMerchantSelected) {
-            PlaceOrder(shopName: selectedMerchant.name, discountPercent: selectedMerchant.discountPercent)
+            PlaceOrder(shopName: selectedMerchant.name, discountPercent: selectedMerchant.discountPercent, order: order)
         }
         .ignoresSafeArea(edges: [.bottom])
     }
