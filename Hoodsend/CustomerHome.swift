@@ -116,7 +116,7 @@ struct CustomerHome: View {
             }
         }
         .navigationDestination(isPresented: $isMerchantSelected) {
-            PlaceOrder(shopName: selectedMerchant.name, balance: selectedMerchant.discountPercent)
+            PlaceOrder(shopName: selectedMerchant.name, discountPercent: selectedMerchant.discountPercent)
         }
         .ignoresSafeArea(edges: [.bottom])
     }

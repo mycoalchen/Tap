@@ -9,20 +9,27 @@ import SwiftUI
 
 struct PlaceOrder: View {
     var shopName: String
-    var balance: Float
+    var discountPercent: Float
     
     struct MenuItem: Identifiable {
         let name: String
         let originalPrice: Float
-        var amount: Int { 0 }
+        var amount: Int
         var id: String { name }
+        
+        mutating func increment() {
+            amount += 1
+        }
+        mutating func decrement() {
+            if (amount > 0) { amount -= 1 }
+        }
     }
     
-    private let menuItems: [MenuItem] = [
-        MenuItem(name: "Gluten-Free White Bread", originalPrice: 3.00),
-        MenuItem(name: "Potato Bread", originalPrice: 2.50),
-        MenuItem(name: "Tortilla", originalPrice: 1.50),
-        MenuItem(name: "Crackers", originalPrice: 0.99),
+    @State private var menuItems: [MenuItem] = [
+        MenuItem(name: "Gluten-Free White Bread", originalPrice: 3.00, amount: 0),
+        MenuItem(name: "Potato Bread", originalPrice: 2.50, amount: 0),
+        MenuItem(name: "Tortilla", originalPrice: 1.50, amount: 0),
+        MenuItem(name: "Crackers", originalPrice: 0.99, amount: 0),
     ]
     
     var body: some View {
@@ -53,20 +60,41 @@ struct PlaceOrder: View {
                 .frame(width: UIScreen.screenWidth - 48, height: 0.75)
             Spacer(minLength: 12)
             ScrollView {
-                ForEach(menuItems) { menuItem in
+                ForEach(menuItems.indices, id: \.self) { index in
                     Button() {
                         
                     } label: {
                         HStack() {
                             VStack(alignment: .leading, spacing: 0) {
-                                Text(menuItem.name).foregroundColor(.black).font(Font.custom("Lexend", size: 16))
-                                Text(String(menuItem.originalPrice)).foregroundColor(.black).font(Font.custom("Lexend", size: 16))
+                                Text(menuItems[index].name).foregroundColor(.black).font(Font.custom("Lexend", size: 16))
+                                Text(String(format: "%.2f", menuItems[index].originalPrice)).foregroundColor(.black).font(Font.custom("Lexend", size: 16)).strikethrough(true) + Text(String(format: " %.2f", menuItems[index].originalPrice * (1 - discountPercent / 100))).font(Font.custom("Lexend", size: 16)).foregroundColor(Color(red: 0.8, green: 0, blue: 0))
                             }
                             Spacer()
-                            Text("Hoes mad")
-                                .foregroundColor(Color(red: 0.8, green: 0, blue: 0)).font(Font.custom("Lexend-Bold", size: 16))
+                            HStack() {
+                                Button() {
+                                    menuItems[index].decrement()
+                                } label: {
+                                    Text("-")
+                                        .font(Font.custom("Lexend", size: 16)).foregroundColor(.black)
+                                }
+                                Text(String(menuItems[index].amount))
+                                    .font(Font.custom("Lexend", size: 14)).foregroundColor(.black)
+                                Button() {
+                                    menuItems[index].increment()
+                                } label: {
+                                    Text("+")
+                                        .font(Font.custom("Lexend", size: 16)).foregroundColor(.black)
+                                }
+                            }
+                            .background(
+                                RoundedRectangle(cornerRadius: 25)
+                                    .fill(.white)
+                                    .frame(width: 64)
+                                    .shadow(color: .black, radius: 1)
+                            )
                         }
-                        .padding(.horizontal, 16)
+                        .padding([.leading, .trailing], 16)
+                        .padding(.trailing, 8)
                     }
                     .padding(.vertical, 12)
                     .frame(maxWidth: .infinity)
@@ -111,6 +139,6 @@ struct PlaceOrder: View {
 
 struct PlaceOrder_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceOrder(shopName: "Chipotle", balance: 66)
+        PlaceOrder(shopName: "Bread Bank", discountPercent: 6)
     }
 }
