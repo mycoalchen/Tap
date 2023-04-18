@@ -13,7 +13,7 @@ public class CustomerInfo: ObservableObject {
 
 // Stores a map representing the user's current order
 class Order: ObservableObject {
-    @Published var merchant = Merchant(name: "Bread Bank", location: "Exeter", discountPercent: 6)
+    @Published var merchant = Merchant(name: "Starbucks", location: "Exeter", discountPercent: 5)
     @Published var items = [MenuItem: Int]()
     
     init() {}
@@ -48,9 +48,20 @@ struct CustomerHome: View {
     @EnvironmentObject var customerInfo: CustomerInfo
     
     private let merchants: [Merchant] = [
-        Merchant(name: "Peet's Coffee", location: "Exeter, NH", discountPercent: 5),
+        Merchant(name: "Starbucks", location: "Exeter, NH", discountPercent: 5),
         Merchant(name: "McDonald's", location: "Exeter, NH", discountPercent: 5),
-        Merchant(name: "Bread Bank", location: "Exeter, NH", discountPercent: 6),
+    ]
+    
+    let starbucksMenu = [
+        MenuItem(name: "Espresso", originalPrice: 5.50),
+        MenuItem(name: "Havana Cappuccino", originalPrice: 3.40),
+        MenuItem(name: "Caffe Latte", originalPrice: 6.00),
+    ]
+    let mcDonaldsMenu = [
+        MenuItem(name: "Big Mac", originalPrice: 5.15),
+        MenuItem(name: "Quarter Pounder", originalPrice: 3.99),
+        MenuItem(name: "Chicken McNuggets (10 Pc.)", originalPrice: 4.49),
+        MenuItem(name: "French Fries (Small)", originalPrice: 1.39),
     ]
         
     @State var selectedMerchant: Merchant = Merchant(name: "", location: "", discountPercent: 0);
@@ -165,7 +176,7 @@ struct CustomerHome: View {
             }
         }
         .navigationDestination(isPresented: $isMerchantSelected) {
-            PlaceOrder(shopName: selectedMerchant.name, discountPercent: selectedMerchant.discountPercent, order: order)
+            PlaceOrder(shopName: selectedMerchant.name, discountPercent: selectedMerchant.discountPercent, order: order, menuItems: (selectedMerchant.name == "Starbucks") ? starbucksMenu : mcDonaldsMenu)
                 .environmentObject(customerInfo)
         }
         .ignoresSafeArea(edges: [.bottom])

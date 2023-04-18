@@ -105,7 +105,7 @@ struct Cart: View {
                 }
             }
         }
-        .navigationDestination(isPresented: $paymentComplete) {
+        .sheet(isPresented: $paymentComplete) {
             PaymentConfirmed(amount: orderTotal)
         }
         .ignoresSafeArea(edges: [.bottom])

@@ -21,6 +21,7 @@
 		B4799BA929EBB46000FA917A /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4799BA829EBB46000FA917A /* Cart.swift */; };
 		B4BF338429EE404E0040DB9F /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF338329EE404E0040DB9F /* Transfer.swift */; };
 		B4BF338629EE4D7B0040DB9F /* PaymentConfirmed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF338529EE4D7B0040DB9F /* PaymentConfirmed.swift */; };
+		B4BF338829EE534A0040DB9F /* DepositConfirmed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF338729EE534A0040DB9F /* DepositConfirmed.swift */; };
 		B4FFAE9429EE27B700D3D9DD /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFAE9329EE27B700D3D9DD /* Deposit.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		B4799BA829EBB46000FA917A /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		B4BF338329EE404E0040DB9F /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		B4BF338529EE4D7B0040DB9F /* PaymentConfirmed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmed.swift; sourceTree = "<group>"; };
+		B4BF338729EE534A0040DB9F /* DepositConfirmed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositConfirmed.swift; sourceTree = "<group>"; };
 		B4FFAE9329EE27B700D3D9DD /* Deposit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deposit.swift; sourceTree = "<group>"; };
 		E62CE27BB533CD9EC73E0257 /* Pods-Tap-TapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tap-TapUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tap-TapUITests/Pods-Tap-TapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E89221601E36AE408C7F9565 /* Pods-Tap-TapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tap-TapUITests.release.xcconfig"; path = "Target Support Files/Pods-Tap-TapUITests/Pods-Tap-TapUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,7 +106,6 @@
 		B472F84A29E6598B00179543 = {
 			isa = PBXGroup;
 			children = (
-				B4BF338529EE4D7B0040DB9F /* PaymentConfirmed.swift */,
 				B4799BA729EB93D400FA917A /* Tap-Info.plist */,
 				B472F85529E6598B00179543 /* Hoodsend */,
 				B472F86629E6598C00179543 /* HoodsendTests */,
@@ -128,6 +129,7 @@
 		B472F85529E6598B00179543 /* Hoodsend */ = {
 			isa = PBXGroup;
 			children = (
+				B4BF338529EE4D7B0040DB9F /* PaymentConfirmed.swift */,
 				B472F85629E6598B00179543 /* TapApp.swift */,
 				B472F85829E6598B00179543 /* ContentView.swift */,
 				B4799BA529EB92E000FA917A /* Lexend-VariableFont_wght.ttf */,
@@ -139,6 +141,7 @@
 				B4799BA829EBB46000FA917A /* Cart.swift */,
 				B4FFAE9329EE27B700D3D9DD /* Deposit.swift */,
 				B4BF338329EE404E0040DB9F /* Transfer.swift */,
+				B4BF338729EE534A0040DB9F /* DepositConfirmed.swift */,
 			);
 			path = Hoodsend;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				B4BF338629EE4D7B0040DB9F /* PaymentConfirmed.swift in Sources */,
 				B4799BA929EBB46000FA917A /* Cart.swift in Sources */,
 				B472F85929E6598B00179543 /* ContentView.swift in Sources */,
+				B4BF338829EE534A0040DB9F /* DepositConfirmed.swift in Sources */,
 				B4FFAE9429EE27B700D3D9DD /* Deposit.swift in Sources */,
 				B472F85729E6598B00179543 /* TapApp.swift in Sources */,
 				B4799BA229E7B19E00FA917A /* MerchantHome.swift in Sources */,

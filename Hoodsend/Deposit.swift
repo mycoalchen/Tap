@@ -12,6 +12,8 @@ struct Deposit: View {
     @State private var amount: Float = 20
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var customerInfo: CustomerInfo
+    @State private var depositConfirmed = false
+    @State private var depositDisabled = false
     
     let formatter = {
         let moneyFormatter = NumberFormatter()
@@ -81,8 +83,11 @@ struct Deposit: View {
             .padding(.bottom, 24)
             .padding(.horizontal, 16)
             Button() {
-                customerInfo.balance += amount
-                dismiss()
+                depositDisabled = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    customerInfo.balance += amount
+                    depositConfirmed = true
+                }
             } label: {
                 HStack {
                     Spacer()
@@ -97,6 +102,7 @@ struct Deposit: View {
             .background(tapPurple)
             .clipShape(Capsule())
             .padding(.bottom, 12)
+            .disabled(depositDisabled)
             Button() {
                 dismiss()
             } label: {
@@ -113,6 +119,9 @@ struct Deposit: View {
             .background(.gray)
             .clipShape(Capsule())
         }
+        .sheet(isPresented: $depositConfirmed) {
+            DepositConfirmed(amount: amount)
+        }
         .frame(maxWidth: .infinity)
         .padding(.horizontal, 16)
     }
@@ -120,7 +129,9 @@ struct Deposit: View {
 
 struct Deposit_Previews: PreviewProvider {
     static var previews: some View {
-        Deposit()
-            .environmentObject(CustomerInfo())
+        NavigationStack {
+            Deposit()
+                .environmentObject(CustomerInfo())
+        }
     }
 }

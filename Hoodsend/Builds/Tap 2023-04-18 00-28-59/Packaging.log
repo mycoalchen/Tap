@@ -1,0 +1,120 @@
+2023-04-18 04:28:53 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x12f10a110; archive(resolved)="<IDEArchive: 0x60007437c2a0>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodDevelopmentSigned: 0x6000165e2ec0>", team(resolved)="<IDEProvisioningDisambiguatableBasicTeam: 0x60000fbdeb00; teamID='XWRYC4CPQY', teamName='Qi Zhang', teamType='Individual', username='kathy.chen1628@gmail.com', isFreeProvisioningTeam='0'>">
+	Chain (14, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x12f10a110; archive = "<IDEArchive: 0x60007437c2a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000165e2ec0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000fbdeb00; teamID='XWRYC4CPQY', teamName='Qi Zhang', teamType='Individual', username='kathy.chen1628@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionProcessingPipelineContext: 0x12f1227a0; archive = "<IDEArchive: 0x60007437c2a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000165e2ec0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000fbdeb00; teamID='XWRYC4CPQY', teamName='Qi Zhang', teamType='Individual', username='kathy.chen1628@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2f6fa5350; archive = "<IDEArchive: 0x60007437c2a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000165e2ec0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000fbdeb00; teamID='XWRYC4CPQY', teamName='Qi Zhang', teamType='Individual', username='kathy.chen1628@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2f6f979c0; archive = "<IDEArchive: 0x60007437c2a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000165e2ec0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000fbdeb00; teamID='XWRYC4CPQY', teamName='Qi Zhang', teamType='Individual', username='kathy.chen1628@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2f6fbe240; archive = "<IDEArchive: 0x60007437c2a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000165e2ec0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000fbdeb00; teamID='XWRYC4CPQY', teamName='Qi Zhang', teamType='Individual', username='kathy.chen1628@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2f6f63690; archive = "<IDEArchive: 0x60007437c2a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000165e2ec0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000fbdeb00; teamID='XWRYC4CPQY', teamName='Qi Zhang', teamType='Individual', username='kathy.chen1628@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2f6fd1fd0; archive = "<IDEArchive: 0x60007437c2a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000165e2ec0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000fbdeb00; teamID='XWRYC4CPQY', teamName='Qi Zhang', teamType='Individual', username='kathy.chen1628@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2f6f67780; archive = "<IDEArchive: 0x60007437c2a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000165e2ec0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000fbdeb00; teamID='XWRYC4CPQY', teamName='Qi Zhang', teamType='Individual', username='kathy.chen1628@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2da369480; archive = "<IDEArchive: 0x60007437c2a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000165e2ec0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x60000fbdeb00; teamID='XWRYC4CPQY', teamName='Qi Zhang', teamType='Individual', username='kathy.chen1628@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2e4908f70; archive = "<IDEArchive: 0x60007437c2a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000165e2ec0>", team="(null)">
+	<IDEDistributionContext: 0x2e3ad0010; archive = "<IDEArchive: 0x60007437c2a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000165e2ec0>", team="(null)">
+	<IDEDistributionContext: 0x2d8418a00; archive = "<IDEArchive: 0x60007437c2a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000165e2ec0>", team="(null)">
+	<IDEDistributionContext: 0x2da3853f0; archive = "<IDEArchive: 0x60007437c2a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x6000165e2ec0>", team="(null)">
+	<IDEDistributionContext: 0x2f6fd77e0; archive = "<IDEArchive: 0x60007437c2a0>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x12f10a110>
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionCreateDestRootStep
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionCopyItemStep
+2023-04-18 04:28:53 +0000  Running /usr/bin/ditto '-V' '/Users/chenm/Library/Developer/Xcode/Archives/2023-04-18/Tap 4-18-23, 12.28 AM.xcarchive/Products/Applications/Tap.app' '/var/folders/41/jfn48rhd17jbnrmsybgn6dw00000gn/T/XcodeDistPipeline.~~~rwLSoO/Root/Payload/Tap.app'
+2023-04-18 04:28:53 +0000  >>> Copying /Users/chenm/Library/Developer/Xcode/Archives/2023-04-18/Tap 4-18-23, 12.28 AM.xcarchive/Products/Applications/Tap.app 
+2023-04-18 04:28:53 +0000  copying file ./_CodeSignature/CodeResources ... 
+2023-04-18 04:28:53 +0000  2559 bytes for ./_CodeSignature/CodeResources
+2023-04-18 04:28:53 +0000  copying file ./Tap ... 
+2023-04-18 04:28:53 +0000  253808 bytes for ./Tap
+2023-04-18 04:28:53 +0000  copying file ./Assets.car ... 
+2023-04-18 04:28:53 +0000  54271 bytes for ./Assets.car
+2023-04-18 04:28:53 +0000  copying file ./Lexend-VariableFont_wght.ttf ... 
+2023-04-18 04:28:53 +0000  173916 bytes for ./Lexend-VariableFont_wght.ttf
+2023-04-18 04:28:53 +0000  copying file ./embedded.mobileprovision ... 
+2023-04-18 04:28:53 +0000  12192 bytes for ./embedded.mobileprovision
+2023-04-18 04:28:53 +0000  copying file ./Info.plist ... 
+2023-04-18 04:28:53 +0000  1295 bytes for ./Info.plist
+2023-04-18 04:28:53 +0000  copying file ./PkgInfo ... 
+2023-04-18 04:28:53 +0000  8 bytes for ./PkgInfo
+2023-04-18 04:28:53 +0000  /usr/bin/ditto exited with 0
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionEmbedProfileStep
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionInfoPlistStep
+2023-04-18 04:28:53 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2023-04-18 04:28:53 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2023-04-18 04:28:53 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2023-04-18 04:28:53 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionSymbolsStep
+2023-04-18 04:28:53 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionAppThinningStep
+2023-04-18 04:28:53 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionArchThinningStep
+2023-04-18 04:28:53 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/41/jfn48rhd17jbnrmsybgn6dw00000gn/T/XcodeDistPipeline.~~~rwLSoO/Root/Payload/Tap.app/Tap' '-verify_arch' 'arm64e'
+2023-04-18 04:28:53 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2023-04-18 04:28:53 +0000  Skipping architecture thinning for item "Tap" because arch "arm64e" wasn't found
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionODRStep
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionStripXattrsStep
+2023-04-18 04:28:53 +0000  Running /usr/bin/xattr '-crs' '/var/folders/41/jfn48rhd17jbnrmsybgn6dw00000gn/T/XcodeDistPipeline.~~~rwLSoO/Root/Payload/Tap.app'
+2023-04-18 04:28:53 +0000  /usr/bin/xattr exited with 0
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionCodesignStep
+2023-04-18 04:28:53 +0000  Entitlements for <IDEDistributionItem: 0x600074336280; bundleID='com.mycoalchen.tap', path='<DVTFilePath:0x60007428ab80:'/Users/chenm/Library/Developer/Xcode/Archives/2023-04-18/Tap 4-18-23, 12.28 AM.xcarchive/Products/Applications/Tap.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600040665220; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000510fde0; name='Apple Development: Qi Zhang (2TXTTR9SV4)', hash='D1E977E4BE0DC5E2680E014C752C89579070FE80', serialNumber='64CE80C8D4D6A5021C2AF6748D023E99', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2022-08-07 14:42:06 +0000''>', entitlements='{
+    "application-identifier" = "XWRYC4CPQY.com.mycoalchen.tap";
+    "com.apple.developer.team-identifier" = XWRYC4CPQY;
+    "get-task-allow" = 1;
+}', teamID='XWRYC4CPQY', identifier='com.mycoalchen.tap', executablePath='<DVTFilePath:0x600074337120:'/Users/chenm/Library/Developer/Xcode/Archives/2023-04-18/Tap 4-18-23, 12.28 AM.xcarchive/Products/Applications/Tap.app/Tap'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "XWRYC4CPQY.com.mycoalchen.tap";
+    "com.apple.developer.team-identifier" = XWRYC4CPQY;
+    "get-task-allow" = 1;
+}
+2023-04-18 04:28:53 +0000  Entitlements for <IDEDistributionItem: 0x600074336280; bundleID='com.mycoalchen.tap', path='<DVTFilePath:0x60007428ab80:'/Users/chenm/Library/Developer/Xcode/Archives/2023-04-18/Tap 4-18-23, 12.28 AM.xcarchive/Products/Applications/Tap.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600040665220; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000510c000; name='Apple Development: Qi Zhang (2TXTTR9SV4)', hash='D1E977E4BE0DC5E2680E014C752C89579070FE80', serialNumber='64CE80C8D4D6A5021C2AF6748D023E99', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2022-08-07 14:42:06 +0000''>', entitlements='{
+    "application-identifier" = "XWRYC4CPQY.com.mycoalchen.tap";
+    "com.apple.developer.team-identifier" = XWRYC4CPQY;
+    "get-task-allow" = 1;
+}', teamID='XWRYC4CPQY', identifier='com.mycoalchen.tap', executablePath='<DVTFilePath:0x600074337120:'/Users/chenm/Library/Developer/Xcode/Archives/2023-04-18/Tap 4-18-23, 12.28 AM.xcarchive/Products/Applications/Tap.app/Tap'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "XWRYC4CPQY.com.mycoalchen.tap";
+    "com.apple.developer.team-identifier" = XWRYC4CPQY;
+    "get-task-allow" = 1;
+}
+2023-04-18 04:28:53 +0000  Writing entitlements for <IDEDistributionItem: 0x600074336280; bundleID='com.mycoalchen.tap', path='<DVTFilePath:0x60007428ab80:'/Users/chenm/Library/Developer/Xcode/Archives/2023-04-18/Tap 4-18-23, 12.28 AM.xcarchive/Products/Applications/Tap.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600040665220; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x60000510e9f0; name='Apple Development: Qi Zhang (2TXTTR9SV4)', hash='D1E977E4BE0DC5E2680E014C752C89579070FE80', serialNumber='64CE80C8D4D6A5021C2AF6748D023E99', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2022-08-07 14:42:06 +0000''>', entitlements='{
+    "application-identifier" = "XWRYC4CPQY.com.mycoalchen.tap";
+    "com.apple.developer.team-identifier" = XWRYC4CPQY;
+    "get-task-allow" = 1;
+}', teamID='XWRYC4CPQY', identifier='com.mycoalchen.tap', executablePath='<DVTFilePath:0x600074337120:'/Users/chenm/Library/Developer/Xcode/Archives/2023-04-18/Tap 4-18-23, 12.28 AM.xcarchive/Products/Applications/Tap.app/Tap'>', hardenedRuntime='0'>'> to: /var/folders/41/jfn48rhd17jbnrmsybgn6dw00000gn/T/XcodeDistPipeline.~~~rwLSoO/entitlements~~~MFtfZk
+2023-04-18 04:28:53 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'D1E977E4BE0DC5E2680E014C752C89579070FE80' '--entitlements' '/var/folders/41/jfn48rhd17jbnrmsybgn6dw00000gn/T/XcodeDistPipeline.~~~rwLSoO/entitlements~~~MFtfZk' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/41/jfn48rhd17jbnrmsybgn6dw00000gn/T/XcodeDistPipeline.~~~rwLSoO/Root/Payload/Tap.app'
+2023-04-18 04:28:53 +0000  /var/folders/41/jfn48rhd17jbnrmsybgn6dw00000gn/T/XcodeDistPipeline.~~~rwLSoO/Root/Payload/Tap.app: replacing existing signature
+2023-04-18 04:28:53 +0000  /var/folders/41/jfn48rhd17jbnrmsybgn6dw00000gn/T/XcodeDistPipeline.~~~rwLSoO/Root/Payload/Tap.app: signed app bundle with Mach-O thin (arm64) [com.mycoalchen.tap]
+2023-04-18 04:28:53 +0000  /usr/bin/codesign exited with 0
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionZipODRItemStep
+2023-04-18 04:28:53 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionCreateIPAStep
+2023-04-18 04:28:53 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/41/jfn48rhd17jbnrmsybgn6dw00000gn/T/XcodeDistPipeline.~~~rwLSoO/Root' '/var/folders/41/jfn48rhd17jbnrmsybgn6dw00000gn/T/XcodeDistPipeline.~~~rwLSoO/Packages/Tap.ipa'
+2023-04-18 04:28:53 +0000  >>> Copying /var/folders/41/jfn48rhd17jbnrmsybgn6dw00000gn/T/XcodeDistPipeline.~~~rwLSoO/Root 
+2023-04-18 04:28:53 +0000  copying file ./Payload/Tap.app/_CodeSignature/CodeResources ... 
+2023-04-18 04:28:53 +0000  2559 bytes for ./Payload/Tap.app/_CodeSignature/CodeResources
+2023-04-18 04:28:53 +0000  copying file ./Payload/Tap.app/Tap ... 
+2023-04-18 04:28:53 +0000  253808 bytes for ./Payload/Tap.app/Tap
+2023-04-18 04:28:53 +0000  copying file ./Payload/Tap.app/Assets.car ... 
+2023-04-18 04:28:53 +0000  54271 bytes for ./Payload/Tap.app/Assets.car
+2023-04-18 04:28:53 +0000  copying file ./Payload/Tap.app/Lexend-VariableFont_wght.ttf ... 
+2023-04-18 04:28:53 +0000  173916 bytes for ./Payload/Tap.app/Lexend-VariableFont_wght.ttf
+2023-04-18 04:28:53 +0000  copying file ./Payload/Tap.app/embedded.mobileprovision ... 
+2023-04-18 04:28:53 +0000  12192 bytes for ./Payload/Tap.app/embedded.mobileprovision
+2023-04-18 04:28:53 +0000  copying file ./Payload/Tap.app/Info.plist ... 
+2023-04-18 04:28:53 +0000  1295 bytes for ./Payload/Tap.app/Info.plist
+2023-04-18 04:28:53 +0000  copying file ./Payload/Tap.app/PkgInfo ... 
+8 bytes for ./Payload/Tap.app/PkgInfo
+2023-04-18 04:28:53 +0000  /usr/bin/ditto exited with 0
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2023-04-18 04:28:53 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2023-04-18 04:28:53 +0000  IDEDistributionItem init <DVTFilePath:0x6000743351a0:'/var/folders/41/jfn48rhd17jbnrmsybgn6dw00000gn/T/XcodeDistPipeline.~~~rwLSoO/Root/Payload/Tap.app'>
+2023-04-18 04:28:53 +0000  Processing step: IDEDistributionCreateManifestStep

@@ -19,12 +19,7 @@ struct PlaceOrder: View {
     @ObservedObject var order: Order
     @EnvironmentObject var customerInfo: CustomerInfo
     
-    @State private var menuItems: [MenuItem] = [
-        MenuItem(name: "Gluten-Free White Bread", originalPrice: 3.00),
-        MenuItem(name: "Potato Bread", originalPrice: 2.50),
-        MenuItem(name: "Tortilla", originalPrice: 1.50),
-        MenuItem(name: "Crackers", originalPrice: 0.99),
-    ]
+    @State var menuItems: [MenuItem]
     
     @State var isReadyToCheckout: Bool = false;
     
@@ -123,7 +118,7 @@ struct PlaceOrder: View {
                     .frame(height: UIScreen.screenHeight / 5)
                     .padding(.all, 0)
                 VStack {
-                    Text("Balance: $\(customerInfo.balance, specifier: "%.2f")")
+                    Text("Total: $\(order.getTotal(), specifier: "%.2f")")
                         .font(Font.custom("Lexend-Bold", size: 24))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 36)
@@ -157,7 +152,7 @@ struct PlaceOrder: View {
 struct PlaceOrder_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            PlaceOrder(shopName: "Bread Bank", discountPercent: 6, order: Order())
+            PlaceOrder(shopName: "Starbucks", discountPercent: 6, order: Order(), menuItems: [])
                 .environmentObject(CustomerInfo())
         }
     }

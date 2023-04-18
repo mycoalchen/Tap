@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Tap.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>D1E977E4BE0DC5E2680E014C752C89579070FE80</string>
+				<key>dateExpires</key>
+				<string>8/7/23</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>XWRYC4CPQY.com.mycoalchen.tap</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>XWRYC4CPQY</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>Tap.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>61fd143a-4584-4117-a869-eed9db9f2142</string>
+				<key>dateExpires</key>
+				<string>4/16/24</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: *</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>XWRYC4CPQY</string>
+				<key>name</key>
+				<string>Qi Zhang</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>
