@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "triggerslider",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dominikbutz/triggerslider.git",
+      "state" : {
+        "revision" : "f13f33015b8bb7b9491c919c454fbcc748a60427",
+        "version" : "0.5.0"
+      }
+    }
+  ],
+  "version" : 2
+}

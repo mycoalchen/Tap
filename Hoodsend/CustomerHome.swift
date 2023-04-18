@@ -11,6 +11,20 @@ import SwiftUI
 class Order: ObservableObject {
     @Published var merchant = Merchant(name: "Bread Bank", location: "Exeter", discountPercent: 6)
     @Published var items = [MenuItem: Int]()
+    
+    init() {}
+    init(_merchant: Merchant, _items: [MenuItem: Int]) {
+        merchant = _merchant
+        items = _items
+    }
+    
+    func getTotal() -> Float {
+        var total: Float = 0
+        for (menuItem, num) in items {
+            total += menuItem.originalPrice * (1 - merchant.discountPercent / 100) * Float(num)
+        }
+        return total
+    }
 }
 
 public struct Merchant: Identifiable {

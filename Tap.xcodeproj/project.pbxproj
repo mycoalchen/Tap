@@ -19,6 +19,7 @@
 		B4799BA429E8DC9300FA917A /* PlaceOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4799BA329E8DC9300FA917A /* PlaceOrder.swift */; };
 		B4799BA629EB92E000FA917A /* Lexend-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4799BA529EB92E000FA917A /* Lexend-VariableFont_wght.ttf */; };
 		B4799BA929EBB46000FA917A /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4799BA829EBB46000FA917A /* Cart.swift */; };
+		B4FFAE9229EE184700D3D9DD /* TriggerSlider in Frameworks */ = {isa = PBXBuildFile; productRef = B4FFAE9129EE184700D3D9DD /* TriggerSlider */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4FFAE9229EE184700D3D9DD /* TriggerSlider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +191,9 @@
 			dependencies = (
 			);
 			name = Tap;
+			packageProductDependencies = (
+				B4FFAE9129EE184700D3D9DD /* TriggerSlider */,
+			);
 			productName = Hoodsend;
 			productReference = B472F85329E6598B00179543 /* Tap.app */;
 			productType = "com.apple.product-type.application";
@@ -263,6 +268,9 @@
 				Base,
 			);
 			mainGroup = B472F84A29E6598B00179543;
+			packageReferences = (
+				B4FFAE9029EE184700D3D9DD /* XCRemoteSwiftPackageReference "triggerslider" */,
+			);
 			productRefGroup = B472F85429E6598B00179543 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -713,6 +721,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B4FFAE9029EE184700D3D9DD /* XCRemoteSwiftPackageReference "triggerslider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dominikbutz/triggerslider.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B4FFAE9129EE184700D3D9DD /* TriggerSlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4FFAE9029EE184700D3D9DD /* XCRemoteSwiftPackageReference "triggerslider" */;
+			productName = TriggerSlider;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B472F84B29E6598B00179543 /* Project object */;
 }

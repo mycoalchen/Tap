@@ -39,53 +39,17 @@ struct Cart: View {
             Spacer(minLength: 12)
             ScrollView {
                 ForEach(order.items.indices.sorted(by: <), id: \.self) { index in
-                    Button() {
-                        if let num = order.items[order.items[index].0] {
-                            order.items.updateValue(num+1, forKey: order.items[index].0)
-                        } else {
-                            order.items.updateValue(1, forKey: order.items[index].0)
+                    HStack() {
+                        VStack(alignment: .leading, spacing: 0) {
+                            Text(order.items[index].0.name).foregroundColor(.black).font(Font.custom("Lexend", size: 16))
+                            Text(String(format: "$%.2f", order.items[index].0.originalPrice)).foregroundColor(.black).font(Font.custom("Lexend", size: 16)).strikethrough(true) + Text(String(format: " $%.2f", order.items[index].0.originalPrice * (1 - order.merchant.discountPercent / 100))).font(Font.custom("Lexend", size: 16)).foregroundColor(Color(red: 0.8, green: 0, blue: 0))
                         }
-                    } label: {
-                        HStack() {
-                            VStack(alignment: .leading, spacing: 0) {
-                                Text(order.items[index].0.name).foregroundColor(.black).font(Font.custom("Lexend", size: 16))
-                                Text(String(format: "$%.2f", order.items[index].0.originalPrice)).foregroundColor(.black).font(Font.custom("Lexend", size: 16)).strikethrough(true) + Text(String(format: " $%.2f", order.items[index].0.originalPrice * (1 - order.merchant.discountPercent / 100))).font(Font.custom("Lexend", size: 16)).foregroundColor(Color(red: 0.8, green: 0, blue: 0))
-                            }
-                            Spacer()
-                            HStack() {
-                                Button() {
-                                    if let num = order.items[order.items[index].0] {
-                                        if (num > 0) {
-                                            order.items.updateValue(num-1, forKey: order.items[index].0)
-                                        }
-                                    }
-                                } label: {
-                                    Text("-")
-                                        .font(Font.custom("Lexend", size: 16)).foregroundColor(.black)
-                                }
-                                Text(String(order.items[order.items[index].0] ?? 0))
-                                    .font(Font.custom("Lexend", size: 14)).foregroundColor(.black)
-                                Button() {
-                                    if let num = order.items[order.items[index].0] {
-                                        order.items.updateValue(num+1, forKey: order.items[index].0)
-                                    } else {
-                                        order.items.updateValue(1, forKey: order.items[index].0)
-                                    }
-                                } label: {
-                                    Text("+")
-                                        .font(Font.custom("Lexend", size: 16)).foregroundColor(.black)
-                                }
-                            }
-                            .background(
-                                RoundedRectangle(cornerRadius: 25)
-                                    .fill(.white)
-                                    .frame(width: 64)
-                                    .shadow(color: .black, radius: 1)
-                            )
-                        }
-                        .padding([.leading, .trailing], 16)
-                        .padding(.trailing, 8)
+                        Spacer()
+                        Text(String(order.items[order.items[index].0] ?? 0))
+                            .font(Font.custom("Lexend", size: 14)).foregroundColor(.black)
                     }
+                    .padding([.leading, .trailing], 16)
+                    .padding(.trailing, 8)
                     .padding(.vertical, 12)
                     .frame(maxWidth: .infinity)
                     .overlay(
@@ -105,7 +69,7 @@ struct Cart: View {
                     .frame(height: UIScreen.screenHeight / 5)
                     .padding(.all, 0)
                 VStack {
-                    Text("Balance: $50.00")
+                    Text(String(format: "Total: $%.2f", order.getTotal()))
                         .font(Font.custom("Lexend-Bold", size: 24))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 36)
@@ -128,6 +92,10 @@ struct Cart: View {
 
 struct Cart_Previews: PreviewProvider {
     static var previews: some View {
-        Cart(order: Order())
+        Cart(order: Order(
+            _merchant: Merchant(name: "Bread Bank", location: "Exeter", discountPercent: 6), _items: [
+                MenuItem(name: "Tortilla", originalPrice: 1.50): 1,
+                MenuItem(name: "Crackers", originalPrice: 0.99): 3,
+            ]))
     }
 }
