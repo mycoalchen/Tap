@@ -53,6 +53,7 @@ struct ContentView: View {
             .padding()
             .navigationDestination(isPresented: $customer) {
                 CustomerHome()
+                    .environmentObject(CustomerInfo())
             }
             .navigationDestination(isPresented: $merchant) {
                 MerchantHome()

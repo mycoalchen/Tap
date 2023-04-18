@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+public class CustomerInfo: ObservableObject {
+    @Published var balance: Float = 50
+}
+
 // Stores a map representing the user's current order
 class Order: ObservableObject {
     @Published var merchant = Merchant(name: "Bread Bank", location: "Exeter", discountPercent: 6)
@@ -37,6 +41,7 @@ public struct Merchant: Identifiable {
 struct CustomerHome: View {
     
     @ObservedObject var order = Order()
+    @EnvironmentObject var customerInfo: CustomerInfo
     
     private let merchants: [Merchant] = [
         Merchant(name: "Peet's Coffee", location: "Exeter, NH", discountPercent: 5),
@@ -45,7 +50,8 @@ struct CustomerHome: View {
     ]
         
     @State var selectedMerchant: Merchant = Merchant(name: "", location: "", discountPercent: 0);
-    @State var isMerchantSelected: Bool = false;
+    @State private var isMerchantSelected: Bool = false;
+    @State private var showingDeposit = false;
     
     var body: some View {
         
@@ -111,13 +117,15 @@ struct CustomerHome: View {
                     .frame(height: UIScreen.screenHeight / 5)
                     .padding(.all, 0)
                 VStack {
-                    Text("Balance: $50.00")
+                    Text("Balance: $\(customerInfo.balance, specifier: "%.2f")")
                         .font(Font.custom("Lexend-Bold", size: 24))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 36)
                         .padding(.bottom, 12)
                     HStack(spacing: 18) {
-                        Button() {} label: {
+                        Button() {
+                            showingDeposit.toggle()
+                        } label: {
                             Text("Deposit")
                                 .font(Font.custom("Lexend-Bold", size: 18))
                                 .foregroundColor(.white)
@@ -138,11 +146,15 @@ struct CustomerHome: View {
                         .background(.white)
                         .clipShape(Capsule())
                     }
+                    .sheet(isPresented: $showingDeposit) {
+                        Deposit()
+                    }
                 }
             }
         }
         .navigationDestination(isPresented: $isMerchantSelected) {
             PlaceOrder(shopName: selectedMerchant.name, discountPercent: selectedMerchant.discountPercent, order: order)
+                .environmentObject(customerInfo)
         }
         .ignoresSafeArea(edges: [.bottom])
     }
@@ -152,6 +164,7 @@ struct CustomerHome_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
             CustomerHome()
+                .environmentObject(CustomerInfo())
         }
     }
 }

@@ -75,7 +75,7 @@ struct Cart: View {
                         .padding(.leading, 36)
                         .padding(.bottom, 12)
                     Button() {} label: {
-                        Text("Checkout")
+                        Text("Pay")
                             .font(Font.custom("Lexend-Bold", size: 18))
                             .foregroundColor(.white)
                     }
