@@ -1,6 +1,6 @@
 //
 //  CustomerHome.swift
-//  Hoodsend
+//  Tap
 //
 //  Created by Michael Chen on 4/12/23.
 //
@@ -29,6 +29,10 @@ class Order: ObservableObject {
         }
         return total
     }
+    func clearItems() {
+        items = [MenuItem: Int]()
+    }
+    
 }
 
 public struct Merchant: Identifiable {
@@ -126,20 +130,28 @@ struct CustomerHome: View {
                         Button() {
                             showingDeposit.toggle()
                         } label: {
-                            Text("Deposit")
-                                .font(Font.custom("Lexend-Bold", size: 18))
-                                .foregroundColor(.white)
+                            HStack {
+                                Spacer()
+                                Text("Deposit")
+                                    .font(Font.custom("Lexend-Bold", size: 18))
+                                    .foregroundColor(.white)
+                                Spacer()
+                            }
                         }
                         .frame(width: 120)
                         .padding()
                         .background(tapPurple)
                         .clipShape(Capsule())
                         Button() {
-                            print(order.items)
+                            
                         } label: {
-                            Text("Transfer")
-                                .font(Font.custom("Lexend-Bold", size: 18))
-                                .foregroundColor(.black)
+                            HStack {
+                                Spacer()
+                                Text("Transfer")
+                                    .font(Font.custom("Lexend-Bold", size: 18))
+                                    .foregroundColor(.black)
+                                Spacer()
+                            }
                         }
                         .frame(width: 120)
                         .padding()

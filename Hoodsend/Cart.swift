@@ -9,6 +9,11 @@ import SwiftUI
 
 struct Cart: View {
     @ObservedObject var order: Order
+    @State private var orderTotal: Float = 0
+    @EnvironmentObject var customerInfo: CustomerInfo
+    @Environment(\.dismiss) private var dismiss
+    @State private var paymentComplete = false
+    @State private var paymentDisabled = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -74,17 +79,34 @@ struct Cart: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 36)
                         .padding(.bottom, 12)
-                    Button() {} label: {
-                        Text("Pay")
-                            .font(Font.custom("Lexend-Bold", size: 18))
-                            .foregroundColor(.white)
+                    Button() {
+                        paymentDisabled = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            orderTotal = order.getTotal()
+                            customerInfo.balance -= orderTotal
+                            order.clearItems()
+                            paymentComplete = true
+                            dismiss()
+                        }
+                    } label: {
+                        HStack {
+                            Spacer()
+                            Text("Confirm")
+                                .font(Font.custom("Lexend-Bold", size: 18))
+                                .foregroundColor(.white)
+                            Spacer()
+                        }
                     }
                     .frame(width: 240)
                     .padding()
                     .background(tapPurple)
                     .clipShape(Capsule())
+                    .disabled(paymentDisabled)
                 }
             }
+        }
+        .navigationDestination(isPresented: $paymentComplete) {
+            PaymentConfirmed(amount: orderTotal)
         }
         .ignoresSafeArea(edges: [.bottom])
     }
@@ -92,10 +114,14 @@ struct Cart: View {
 
 struct Cart_Previews: PreviewProvider {
     static var previews: some View {
-        Cart(order: Order(
-            _merchant: Merchant(name: "Bread Bank", location: "Exeter", discountPercent: 6), _items: [
-                MenuItem(name: "Tortilla", originalPrice: 1.50): 1,
-                MenuItem(name: "Crackers", originalPrice: 0.99): 3,
-            ]))
+        NavigationStack {
+            Cart(order: Order(
+                _merchant: Merchant(name: "Bread Bank", location: "Exeter", discountPercent: 6), _items: [
+                    MenuItem(name: "Tortilla", originalPrice: 1.50): 1,
+                    MenuItem(name: "Crackers", originalPrice: 0.99): 3,
+                ]))
+            .environmentObject(CustomerInfo())
+        }
     }
 }
+

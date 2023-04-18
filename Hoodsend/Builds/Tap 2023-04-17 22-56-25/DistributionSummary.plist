@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Tap.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>134A45B28FB68DF42E82AB8BB47B527F2213E85A</string>
+				<key>dateExpires</key>
+				<string>8/7/23</string>
+				<key>type</key>
+				<string>Cloud Managed Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>XWRYC4CPQY.com.mycoalchen.tap</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>XWRYC4CPQY</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>Tap.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>b8ba4284-9052-4561-a346-2a8a001f354e</string>
+				<key>dateExpires</key>
+				<string>8/7/23</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: com.mycoalchen.tap</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>XWRYC4CPQY</string>
+				<key>name</key>
+				<string>Qi Zhang</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>

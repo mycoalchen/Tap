@@ -131,9 +131,13 @@ struct PlaceOrder: View {
                     Button() {
                         isReadyToCheckout = true
                     } label: {
-                        Text("Checkout")
-                            .font(Font.custom("Lexend-Bold", size: 18))
-                            .foregroundColor(.white)
+                        HStack {
+                            Spacer()
+                            Text("Checkout")
+                                .font(Font.custom("Lexend-Bold", size: 18))
+                                .foregroundColor(.white)
+                            Spacer()
+                        }
                     }
                     .frame(width: 240)
                     .padding()
@@ -144,6 +148,7 @@ struct PlaceOrder: View {
         }
         .navigationDestination(isPresented: $isReadyToCheckout) {
             Cart(order: order)
+                .environmentObject(customerInfo)
         }
         .ignoresSafeArea(edges: [.bottom])
     }

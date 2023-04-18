@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Hoodsend
+@testable import Tap
 
 final class HoodsendTests: XCTestCase {
 

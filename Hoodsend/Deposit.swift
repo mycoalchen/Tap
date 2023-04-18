@@ -42,22 +42,38 @@ struct Deposit: View {
             Spacer()
             HStack() {
                 Button() {} label: {
-                    Text("Instant")
-                        .font(Font.custom("Lexend-medium", size: 16))
-                        .foregroundColor(.black)
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Text("Instant")
+                                .font(Font.custom("Lexend-medium", size: 16))
+                                .foregroundColor(.black)
+                            Spacer()
+                        }
+                        Spacer()
+                    }
                 }
                 .padding(.vertical, 12)
-                .frame(minWidth: 130, minHeight: 100)
+                .frame(width: 130, height: 100)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(Color.gray, lineWidth: 0.5))
                 Button() {} label: {
-                    Text("1-3 Biz Days")
-                        .font(Font.custom("Lexend-medium", size: 16))
-                        .foregroundColor(.black)
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Text("1-3 Biz Days")
+                                .font(Font.custom("Lexend-medium", size: 16))
+                                .foregroundColor(.black)
+                            Spacer()
+                        }
+                        Spacer()
+                    }
                 }
                 .padding(.vertical, 12)
-                .frame(minWidth: 130, minHeight: 100)
+                .frame(width: 130, height: 100)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(Color.gray, lineWidth: 0.5))
@@ -68,21 +84,29 @@ struct Deposit: View {
                 customerInfo.balance += amount
                 dismiss()
             } label: {
-                Text("Deposit")
-                    .font(Font.custom("Lexend-Bold", size: 18))
-                    .foregroundColor(.white)
+                HStack {
+                    Spacer()
+                    Text("Confirm")
+                        .font(Font.custom("Lexend-Bold", size: 18))
+                        .foregroundColor(.white)
+                    Spacer()
+                }
             }
             .frame(width: 240)
             .padding()
-            .background(.green)
+            .background(tapPurple)
             .clipShape(Capsule())
             .padding(.bottom, 12)
             Button() {
                 dismiss()
             } label: {
-                Text("Cancel")
-                    .font(Font.custom("Lexend-Bold", size: 18))
-                    .foregroundColor(.white)
+                HStack {
+                    Spacer()
+                    Text("Cancel")
+                        .font(Font.custom("Lexend-Bold", size: 18))
+                        .foregroundColor(.white)
+                    Spacer()
+                }
             }
             .frame(width: 240)
             .padding()
