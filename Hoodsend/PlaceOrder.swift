@@ -25,6 +25,8 @@ struct PlaceOrder: View {
         MenuItem(name: "Crackers", originalPrice: 0.99),
     ]
     
+    @State var isReadyToCheckout: Bool = false;
+    
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
@@ -55,7 +57,11 @@ struct PlaceOrder: View {
             ScrollView {
                 ForEach(menuItems.indices, id: \.self) { index in
                     Button() {
-                        
+                        if let num = order.items[menuItems[index]] {
+                            order.items.updateValue(num+1, forKey: menuItems[index])
+                        } else {
+                            order.items.updateValue(1, forKey: menuItems[index])
+                        }
                     } label: {
                         HStack() {
                             VStack(alignment: .leading, spacing: 0) {
@@ -121,7 +127,9 @@ struct PlaceOrder: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 36)
                         .padding(.bottom, 12)
-                    Button() {} label: {
+                    Button() {
+                        isReadyToCheckout = true
+                    } label: {
                         Text("Checkout")
                             .font(Font.custom("Lexend-Bold", size: 18))
                             .foregroundColor(.white)
@@ -133,12 +141,17 @@ struct PlaceOrder: View {
                 }
             }
         }
+        .navigationDestination(isPresented: $isReadyToCheckout) {
+            Cart(order: order)
+        }
         .ignoresSafeArea(edges: [.bottom])
     }
 }
 
 struct PlaceOrder_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceOrder(shopName: "Bread Bank", discountPercent: 6, order: Order())
+        NavigationStack {
+            PlaceOrder(shopName: "Bread Bank", discountPercent: 6, order: Order())
+        }
     }
 }

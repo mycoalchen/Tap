@@ -9,16 +9,18 @@ import SwiftUI
 
 // Stores a map representing the user's current order
 class Order: ObservableObject {
+    @Published var merchant = Merchant(name: "Bread Bank", location: "Exeter", discountPercent: 6)
     @Published var items = [MenuItem: Int]()
 }
 
+public struct Merchant: Identifiable {
+    let name: String
+    let location: String
+    let discountPercent: Float
+    public var id: String { name + " - " + location }
+}
+
 struct CustomerHome: View {
-    struct Merchant: Identifiable {
-        let name: String
-        let location: String
-        let discountPercent: Float
-        var id: String { name + " - " + location }
-    }
     
     @ObservedObject var order = Order()
     
